@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer')
 const halaman = require('../lib/email')
 
     async function addUser(username, email, password, apikey, id, nomorWa) {
-        let obj = { username, email, password, apikey, defaultKey: apikey, jid: id, nomorWa, status: null, premium: null, admin: null, limit: limitCount, totalreq: 0 };
+        let obj = { username, email, password, apikey, defaultKey: apikey, jid: id, nomorWa, status: null, premium: null, admin: true, limit: limitCount, totalreq: 0 };
         User.create(obj);
     }
     module.exports.addUser = addUser
